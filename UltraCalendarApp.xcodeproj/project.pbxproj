@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3A469B41E93ABC80064034A /* RaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A469B31E93ABC80064034A /* RaceTableViewCell.swift */; };
+		C3A469B61E93AFA90064034A /* RaceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A469B51E93AFA90064034A /* RaceTableViewController.swift */; };
+		C3A469B81E93B0B60064034A /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A469B71E93B0B60064034A /* Race.swift */; };
 		C3CA3C531E92E61E005E69ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CA3C521E92E61E005E69ED /* AppDelegate.swift */; };
 		C3CA3C551E92E61E005E69ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CA3C541E92E61E005E69ED /* ViewController.swift */; };
 		C3CA3C581E92E61E005E69ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3CA3C561E92E61E005E69ED /* Main.storyboard */; };
@@ -26,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C3A469B31E93ABC80064034A /* RaceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaceTableViewCell.swift; sourceTree = "<group>"; };
+		C3A469B51E93AFA90064034A /* RaceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaceTableViewController.swift; sourceTree = "<group>"; };
+		C3A469B71E93B0B60064034A /* Race.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
 		C3CA3C4F1E92E61E005E69ED /* UltraCalendarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltraCalendarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3CA3C521E92E61E005E69ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3CA3C541E92E61E005E69ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +85,9 @@
 			children = (
 				C3CA3C521E92E61E005E69ED /* AppDelegate.swift */,
 				C3CA3C541E92E61E005E69ED /* ViewController.swift */,
+				C3A469B31E93ABC80064034A /* RaceTableViewCell.swift */,
+				C3A469B51E93AFA90064034A /* RaceTableViewController.swift */,
+				C3A469B71E93B0B60064034A /* Race.swift */,
 				C3CA3C561E92E61E005E69ED /* Main.storyboard */,
 				C3CA3C591E92E61E005E69ED /* Assets.xcassets */,
 				C3CA3C5B1E92E61E005E69ED /* LaunchScreen.storyboard */,
@@ -199,8 +208,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3A469B41E93ABC80064034A /* RaceTableViewCell.swift in Sources */,
 				C3CA3C551E92E61E005E69ED /* ViewController.swift in Sources */,
+				C3A469B61E93AFA90064034A /* RaceTableViewController.swift in Sources */,
 				C3CA3C531E92E61E005E69ED /* AppDelegate.swift in Sources */,
+				C3A469B81E93B0B60064034A /* Race.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +416,7 @@
 				C3CA3C6E1E92E61E005E69ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C3CA3C6F1E92E61E005E69ED /* Build configuration list for PBXNativeTarget "UltraCalendarAppTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +425,7 @@
 				C3CA3C711E92E61E005E69ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

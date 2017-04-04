@@ -10,7 +10,7 @@ import XCTest
 @testable import UltraCalendarApp
 
 class UltraCalendarAppTests: XCTestCase {
-    
+  
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -32,5 +32,30 @@ class UltraCalendarAppTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    
+    
+    //MARK: Race Class Tests
+    
+    //confirm the race initialiser returns Race object with valid initialisers
+    func testRaceInitialiserSucceeds(){
+        
+        //26 distance and name provided
+        let marathonDistance = Race.init(name: "test race", logo: nil, distance: 27)
+        XCTAssertNotNil(marathonDistance)
+        
+        
+    }
+    
+    func testRaceInitialiserFails(){
+        //Distance less than ulta
+        let tooSmallDistance = Race.init(name: "test", logo: nil, distance: 25)
+        XCTAssertNil(tooSmallDistance)
+        
+        //Empty String
+        let emptyNameString = Race.init(name: "", logo: nil, distance: 30)
+        XCTAssertNil(emptyNameString)
+    }
+    
     
 }

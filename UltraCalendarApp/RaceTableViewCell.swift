@@ -16,8 +16,6 @@ class RaceTableViewCell: UITableViewCell {
     @IBOutlet weak var raceLogoImageView: UIImageView!
     @IBOutlet weak var distanceLabel: UILabel!
     
-    
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import os.log
 
 class RaceTableViewController: UITableViewController {
 
@@ -112,5 +113,77 @@ class RaceTableViewController: UITableViewController {
         
         
     }
+    
+
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        switch(segue.identifier ?? "") {
+            
+        case "ShowDetail":
+            guard let raceProfileViewController = segue.destination as? RaceProfileViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            guard let selectedRaceCell = sender as? RaceTableViewCell else {
+                fatalError("Unexpected sender: \(sender)")
+            }
+            
+            guard let indexPath = tableView.indexPath(for: selectedRaceCell) else {
+                fatalError("The selected cell is not being displayed by the table")
+            }
+
+            //find selected Race in the objectsArray Struct defined in Properties
+            let selectedRace = objectsArray[indexPath.section].sectionObjects[indexPath.row]
+            
+            raceProfileViewController.race = selectedRace
+            
+        default:
+            fatalError("Unexpected Segue Identifier; \(segue.identifier)")
+        }
+
+    }
+
+    
+//    //MARK: Navigation
+//    // This method lets you configure a view controller before it's presented.
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        
+//        super.prepare(for: segue, sender: sender)
+////        
+////        // Configure the destination view controller only when the save button is pressed.
+////        guard let button = sender as? UIBarButtonItem, button === saveButton else {
+////            os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
+////            return
+////        }
+//        
+////        let name = nameTextField.text ?? ""
+////        let photo = photoImageView.image
+////        let rating = ratingControl.rating
+//        
+//        // Set the meal to be passed to MealTableViewController after the unwind segue.
+////        meal = Meal(name: name, photo: photo, rating: rating)
+//
+//    }
+    
+    
+//    
+//    @IBAction func unwindToMealList(sender: UIStoryboardSegue) {
+//        if let sourceViewController = sender.source as? MealViewController, let meal = sourceViewController.meal {
+//            
+//            // Add a new meal.
+//            let newIndexPath = IndexPath(row: meals.count, section: 0)
+//            
+//            meals.append(meal)
+//            tableView.insertRows(at: [newIndexPath], with: .automatic)
+//        }
+//    }
+    
+    
+    
+    
+    
+
 
 }

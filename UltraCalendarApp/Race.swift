@@ -12,13 +12,15 @@ class Race {
     
     //MARK: Properties
     
-    var name: String
-    var logo: UIImage?
+    let name: String
+    let logo: UIImage?
+    let distance: Int
     
-    var distance: Int
-//    var cost: Double
-//    var location: String
-//    var date: Date
+//    let climb: String
+//    let cost: Double
+//    let location: String
+//    
+
     
     //MARK: Initialisation
     

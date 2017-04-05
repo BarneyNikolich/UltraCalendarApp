@@ -13,10 +13,11 @@ class RaceProfileViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var raceNameLabel: UILabel!
     @IBOutlet weak var raceLogoImage: UIImageView!
+    @IBOutlet weak var infoTextView: UITextView!
     
     var race: Race? //Race variable is passed by 'RaceTableViewController' in 'prepareForSegue(sender)' func
     
-    let raceCategories = ["Distance (mi)", "Climb (ft)", "Cost (£)", "Location"]
+    let raceCategories = ["Distance (mi)", "Date", "Climb (ft)", "Cost (£)", "Location"]
     
 
     //MARK: Table Delegate Methods
@@ -42,9 +43,7 @@ class RaceProfileViewController: UIViewController, UITableViewDataSource, UITabl
         
         //Populate the Property Label with raceCategories Array defined in properties
         cell.racePropertyLabel.text = raceCategories[row]
-        
-        print("Categories: " + raceCategories[row])
-        
+                
         //Dynamically populate the category information based on category name
         switch(raceCategories[row]) {
             
@@ -52,6 +51,8 @@ class RaceProfileViewController: UIViewController, UITableViewDataSource, UITabl
                 cell.raceInfoLabel.text = "\(race!.distance)"
             case "Climb (ft)":
                 cell.raceInfoLabel.text = "\(race!.climb)"
+            case "Date":
+                cell.raceInfoLabel.text = race!.date
             case "Cost (£)":
                 cell.raceInfoLabel.text = "\(race!.cost)"
             case "Location":
@@ -94,6 +95,8 @@ class RaceProfileViewController: UIViewController, UITableViewDataSource, UITabl
             raceNameLabel.text = race.name
             navigationItem.title = race.name
             raceLogoImage.image = race.logo
+            infoTextView.text = race.info
+            
 
         } else {
             fatalError("Could not load race profile for \(race?.name)")

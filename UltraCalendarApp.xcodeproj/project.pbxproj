@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C3034F3F1E95058800F2ED11 /* RacePorfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3034F3E1E95058800F2ED11 /* RacePorfileViewController.swift */; };
+		C387D78B1E95B20800CDAEC9 /* AppDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C387D78A1E95B20800CDAEC9 /* AppDataHelper.swift */; };
 		C38FC5D21E953BFE00AD80CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C38FC5D01E953BFE00AD80CC /* Main.storyboard */; };
 		C38FC5D41E955AC900AD80CC /* RaceProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FC5D31E955AC900AD80CC /* RaceProfileViewCell.swift */; };
 		C3A469B41E93ABC80064034A /* RaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A469B31E93ABC80064034A /* RaceTableViewCell.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		C3034F3E1E95058800F2ED11 /* RacePorfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RacePorfileViewController.swift; sourceTree = "<group>"; };
+		C387D78A1E95B20800CDAEC9 /* AppDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDataHelper.swift; sourceTree = "<group>"; };
 		C38FC5D11E953BFE00AD80CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C38FC5D31E955AC900AD80CC /* RaceProfileViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaceProfileViewCell.swift; sourceTree = "<group>"; };
 		C3A469B31E93ABC80064034A /* RaceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaceTableViewCell.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				C3034F3E1E95058800F2ED11 /* RacePorfileViewController.swift */,
 				C3A469B51E93AFA90064034A /* RaceTableViewController.swift */,
 				C3A469B71E93B0B60064034A /* Race.swift */,
+				C387D78A1E95B20800CDAEC9 /* AppDataHelper.swift */,
 				C38FC5D01E953BFE00AD80CC /* Main.storyboard */,
 				C3CA3C591E92E61E005E69ED /* Assets.xcassets */,
 				C3CA3C5B1E92E61E005E69ED /* LaunchScreen.storyboard */,
@@ -215,6 +218,7 @@
 				C38FC5D41E955AC900AD80CC /* RaceProfileViewCell.swift in Sources */,
 				C3A469B41E93ABC80064034A /* RaceTableViewCell.swift in Sources */,
 				C3A469B61E93AFA90064034A /* RaceTableViewController.swift in Sources */,
+				C387D78B1E95B20800CDAEC9 /* AppDataHelper.swift in Sources */,
 				C3CA3C531E92E61E005E69ED /* AppDelegate.swift in Sources */,
 				C3A469B81E93B0B60064034A /* Race.swift in Sources */,
 			);

@@ -15,10 +15,13 @@ class Race {
     let name: String
     let logo: UIImage?
     let distance: Int
+    let date: String
+//    let raceDate: Date
     
     let climb: Int
     let cost: Int
     let location: String
+    let info: String
 //
 
     
@@ -26,7 +29,7 @@ class Race {
     
     //Method prepares instance of class for use, sets initial values for each properties for setup
     //? makes initialiser failable - return optional value (either value or nil) - returns optional race?
-    init?(name: String, logo: UIImage?, distance: Int, climb: Int, cost: Int, location: String) {
+    init?(name: String, logo: UIImage?, distance: Int, climb: Int, cost: Int, location: String, date: String, info: String) {
         
         //Name must not be empty
         guard !name.isEmpty else {
@@ -39,11 +42,13 @@ class Race {
         }
     
         self.name = name
+        self.date = date
         self.logo = logo
         self.distance = distance
         self.climb = climb
         self.cost = cost
         self.location = location
+        self.info = info
     }
     
     

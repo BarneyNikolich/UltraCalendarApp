@@ -92,15 +92,15 @@ class RaceTableViewController: UITableViewController {
         let lakelandsLogo = UIImage(named: "lakelands")
         
         //Create race objects
-        guard let calderdaleHike = Race(name: "Calderdale Hike", logo: calderdaleHikeLogo, distance: 37) else {
+        guard let calderdaleHike = Race(name: "Calderdale Hike", logo: calderdaleHikeLogo, distance: 37, climb: 4500, cost: 15, location: "West Yorkshire") else {
             fatalError("Could not load calderdale hike")
         }
         
-        guard let fellsman = Race(name: "Fellsman", logo: fellsmanLogo, distance: 62) else {
+        guard let fellsman = Race(name: "Fellsman", logo: fellsmanLogo, distance: 62, climb: 11000, cost: 20, location:  "Yorkshire Dales") else {
             fatalError("Could not load Fellsman")
         }
         
-        guard let lakeRace = Race(name: "Lakelands 100", logo: lakelandsLogo, distance: 100) else {
+        guard let lakeRace = Race(name: "Lakelands 100", logo: lakelandsLogo, distance: 100, climb: 15000, cost: 50, location: "Lake Dsitrict") else {
             fatalError("Could not load Lakelands 100")
         }
 

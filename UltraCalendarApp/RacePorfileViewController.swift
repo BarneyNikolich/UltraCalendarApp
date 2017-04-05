@@ -16,9 +16,8 @@ class RaceProfileViewController: UIViewController, UITableViewDataSource, UITabl
     
     var race: Race? //Race variable is passed by 'RaceTableViewController' in 'prepareForSegue(sender)' func
     
-    let raceCategories = ["Distance:", "Climb:", "Cost:", "Terrain", "Location:"]
+    let raceCategories = ["Distance (mi)", "Climb (ft)", "Cost (£)", "Location"]
     
-    let textCellIdentifier = "TextCell"
 
     //MARK: Table Delegate Methods
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -30,11 +29,38 @@ class RaceProfileViewController: UIViewController, UITableViewDataSource, UITabl
     }
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //Create custom cell
-        let cell = tableView.dequeueReusableCell(withIdentifier: textCellIdentifier, for: indexPath)
+        let raceProfileCellIdentifier = "RaceProfileViewCell"
+
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: raceProfileCellIdentifier, for: indexPath)
+            as? RaceProfileViewCell
+        else {
+            fatalError("The dequeued cell is not an instance of RaceProfileViewCell")
+        }
         
+        //Get index of current table row
         let row = indexPath.row
-        cell.textLabel?.text = raceCategories[row]
-                
+        
+        //Populate the Property Label with raceCategories Array defined in properties
+        cell.racePropertyLabel.text = raceCategories[row]
+        
+        print("Categories: " + raceCategories[row])
+        
+        //Dynamically populate the category information based on category name
+        switch(raceCategories[row]) {
+            
+            case "Distance (mi)":
+                cell.raceInfoLabel.text = "\(race!.distance)"
+            case "Climb (ft)":
+                cell.raceInfoLabel.text = "\(race!.climb)"
+            case "Cost (£)":
+                cell.raceInfoLabel.text = "\(race!.cost)"
+            case "Location":
+                cell.raceInfoLabel.text = "\(race!.location)"
+            default:
+                fatalError("Problem populating race properties in race profile UITable")
+            }
+        
+        
         return cell
     }
     

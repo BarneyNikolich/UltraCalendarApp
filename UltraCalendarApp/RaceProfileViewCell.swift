@@ -12,6 +12,8 @@ class RaceProfileViewCell: UITableViewCell {
 
     //MARK: Properties
     
+    @IBOutlet weak var racePropertyLabel: UILabel!
+    @IBOutlet weak var raceInfoLabel: UILabel!
 
     
     

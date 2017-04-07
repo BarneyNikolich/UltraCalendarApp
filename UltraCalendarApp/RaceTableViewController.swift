@@ -27,6 +27,8 @@ class RaceTableViewController: UITableViewController {
         
         //Load races to table view
         loadRaces()
+        tabBarItem = UITabBarItem(title: "Authors", image: UIImage(named: "homeIcon"), tag: 0)
+
     }
 
     override func didReceiveMemoryWarning() {

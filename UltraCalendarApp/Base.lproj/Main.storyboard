@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="iZA-0t-qkn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FUF-3p-9im">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bqg-lO-Mea" id="SN8-mU-n7H">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="TIY-0u-4rd">
@@ -59,7 +59,9 @@
                             <outlet property="delegate" destination="WCP-KI-uk0" id="ezU-xd-Kwf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Upcoming races" id="rsE-17-dXK"/>
+                    <navigationItem key="navigationItem" title="Upcoming races" id="rsE-17-dXK">
+                        <barButtonItem key="rightBarButtonItem" image="filterIcon" id="hHn-sR-75O"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0D5-El-zwe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -108,7 +110,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TlD-qi-MuU" id="Gbc-Lp-o2o">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHc-sa-zHk">
@@ -157,10 +159,67 @@
             </objects>
             <point key="canvasLocation" x="3108" y="34"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item 2-->
+        <scene sceneID="WBP-2c-qRA">
+            <objects>
+                <viewController id="con-YR-m5i" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NaG-EZ-Owp"/>
+                        <viewControllerLayoutGuide type="bottom" id="eAR-Dt-a4y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tdl-w7-FeU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.7875600962" green="0.30407096169999998" blue="0.13534035010000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" image="homeIcon" id="heI-aY-H93"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mie-d3-4mS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1524" y="1358"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="yzN-vp-KST">
+            <objects>
+                <viewController id="zcm-V0-3JU" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ncg-sh-c0O"/>
+                        <viewControllerLayoutGuide type="bottom" id="VDq-d8-X5U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Nie-ST-BQa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.41972719990000001" green="0.79823717949999995" blue="0.79198978980000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="l3T-Kn-oxv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PCG-l1-POh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1524" y="697"/>
+        </scene>
+        <!--Tab Bar-->
+        <scene sceneID="mdd-E5-L42">
+            <objects>
+                <tabBarController id="FUF-3p-9im" customClass="TabBar" customModule="UltraCalendarApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="ugR-J2-5Yb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="iZA-0t-qkn" kind="relationship" relationship="viewControllers" id="CB3-oW-kJe"/>
+                        <segue destination="zcm-V0-3JU" kind="relationship" relationship="viewControllers" id="9Th-01-0uT"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EWp-WP-aPU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="585" y="959"/>
+        </scene>
+        <!--Races-->
         <scene sceneID="08X-GQ-mhn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iZA-0t-qkn" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Races" image="runnerIcon" id="Bb5-Hu-JcR"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qX8-9X-nVS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -178,5 +237,8 @@
     </scenes>
     <resources>
         <image name="defaultPhoto" width="320" height="320"/>
+        <image name="filterIcon" width="25" height="25"/>
+        <image name="homeIcon" width="25" height="25"/>
+        <image name="runnerIcon" width="30" height="30"/>
     </resources>
 </document>

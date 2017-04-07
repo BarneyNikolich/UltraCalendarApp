@@ -16,14 +16,11 @@ class Race {
     let logo: UIImage?
     let distance: Int
     let date: String
-//    let raceDate: Date
     
     let climb: Int
     let cost: Int
     let location: String
     let info: String
-//
-
     
     //MARK: Initialisation
     

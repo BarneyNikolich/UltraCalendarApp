@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		C3034F3F1E95058800F2ED11 /* RacePorfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3034F3E1E95058800F2ED11 /* RacePorfileViewController.swift */; };
 		C31A7CD21E97C6D00057EE97 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31A7CD11E97C6D00057EE97 /* TabBar.swift */; };
+		C33115AF1EC3BAA200A98F5F /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33115AE1EC3BAA200A98F5F /* SearchTableViewController.swift */; };
 		C387D78B1E95B20800CDAEC9 /* AppDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C387D78A1E95B20800CDAEC9 /* AppDataHelper.swift */; };
 		C38FC5D21E953BFE00AD80CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C38FC5D01E953BFE00AD80CC /* Main.storyboard */; };
 		C38FC5D41E955AC900AD80CC /* RaceProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38FC5D31E955AC900AD80CC /* RaceProfileViewCell.swift */; };
+		C39637AA1EC45136008EC441 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39637A91EC45136008EC441 /* SearchTableViewCell.swift */; };
 		C3A469B41E93ABC80064034A /* RaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A469B31E93ABC80064034A /* RaceTableViewCell.swift */; };
 		C3A469B61E93AFA90064034A /* RaceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A469B51E93AFA90064034A /* RaceTableViewController.swift */; };
 		C3A469B81E93B0B60064034A /* Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A469B71E93B0B60064034A /* Race.swift */; };
@@ -34,9 +36,11 @@
 /* Begin PBXFileReference section */
 		C3034F3E1E95058800F2ED11 /* RacePorfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RacePorfileViewController.swift; sourceTree = "<group>"; };
 		C31A7CD11E97C6D00057EE97 /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		C33115AE1EC3BAA200A98F5F /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		C387D78A1E95B20800CDAEC9 /* AppDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDataHelper.swift; sourceTree = "<group>"; };
 		C38FC5D11E953BFE00AD80CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C38FC5D31E955AC900AD80CC /* RaceProfileViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaceProfileViewCell.swift; sourceTree = "<group>"; };
+		C39637A91EC45136008EC441 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		C3A469B31E93ABC80064034A /* RaceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaceTableViewCell.swift; sourceTree = "<group>"; };
 		C3A469B51E93AFA90064034A /* RaceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RaceTableViewController.swift; sourceTree = "<group>"; };
 		C3A469B71E93B0B60064034A /* Race.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Race.swift; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 				C3CA3C591E92E61E005E69ED /* Assets.xcassets */,
 				C3CA3C5B1E92E61E005E69ED /* LaunchScreen.storyboard */,
 				C3CA3C5E1E92E61E005E69ED /* Info.plist */,
+				C33115AE1EC3BAA200A98F5F /* SearchTableViewController.swift */,
+				C39637A91EC45136008EC441 /* SearchTableViewCell.swift */,
 			);
 			path = UltraCalendarApp;
 			sourceTree = "<group>";
@@ -218,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3034F3F1E95058800F2ED11 /* RacePorfileViewController.swift in Sources */,
+				C33115AF1EC3BAA200A98F5F /* SearchTableViewController.swift in Sources */,
 				C38FC5D41E955AC900AD80CC /* RaceProfileViewCell.swift in Sources */,
 				C3A469B41E93ABC80064034A /* RaceTableViewCell.swift in Sources */,
 				C31A7CD21E97C6D00057EE97 /* TabBar.swift in Sources */,
@@ -225,6 +232,7 @@
 				C387D78B1E95B20800CDAEC9 /* AppDataHelper.swift in Sources */,
 				C3CA3C531E92E61E005E69ED /* AppDelegate.swift in Sources */,
 				C3A469B81E93B0B60064034A /* Race.swift in Sources */,
+				C39637AA1EC45136008EC441 /* SearchTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

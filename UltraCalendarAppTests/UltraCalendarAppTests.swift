@@ -41,19 +41,18 @@ class UltraCalendarAppTests: XCTestCase {
     func testRaceInitialiserSucceeds(){
         
         //26 distance and name provided
-        let marathonDistance = Race.init(name: "test race", logo: nil, distance: 27)
+        let marathonDistance = Race.init(name: "test race", logo: nil, distance: 27, climb: 3000, cost: 30, location: "Yorkshire", date: "12/12/12", info: "")
         XCTAssertNotNil(marathonDistance)
-        
         
     }
     
     func testRaceInitialiserFails(){
         //Distance less than ulta
-        let tooSmallDistance = Race.init(name: "test", logo: nil, distance: 25)
+        let tooSmallDistance = Race.init(name: "test", logo: nil, distance: 25, climb: 3000, cost: 30, location: "Yorkshire", date: "12/12/12", info: "")
         XCTAssertNil(tooSmallDistance)
         
         //Empty String
-        let emptyNameString = Race.init(name: "", logo: nil, distance: 30)
+        let emptyNameString = Race.init(name: "", logo: nil, distance: 30, climb: 3000, cost: 30, location: "Yorkshire", date: "12/12/12", info: "")
         XCTAssertNil(emptyNameString)
     }
     

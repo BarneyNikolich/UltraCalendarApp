@@ -39,6 +39,8 @@ class AppDataHelper {
         let hardmoors60Logo = UIImage(named: "hardmoor")
         let jedburghLogo = UIImage(named: "jedburgh")
         let northantsLogo = UIImage(named: "northants")
+        let whiteroseulta = UIImage(named: "whiterose")
+        let roundroth = UIImage(named: "roundroth")
 
         //Create race info
         let calderdaleInfo = "This classic Yorkshire Pennines trail event always attracts a lot of Runfurther runners.  It starts at Sowerby in the Calder Valley, taking a big loop around Calderdale, with a new route every three years.  There was a new route for 2015, and it takes in the hills and reservoirs to the south, visiting Windy Hill, Blackstone Edge, then heading west towards Bacup.  After Slate Pit Hill the route loops north round to Cross Stone, then crosses the main valley to Mankinholes.  This is really good running: it’s a great area with a lot of varied moorland and valley scenery.  The route is defined only by the checkpoints, and you must devise your own route between them.  Many runners lost time routefinding in 2015, but more knew where to go last year!"
@@ -55,6 +57,9 @@ class AppDataHelper {
         
         let northantsInfo = "This race follows a loop through pretty Northamptonshire countryside on paths, tracks and some minor roads.  It makes for fast running in the main, although it’s a bit hillier than you’d expect (if you’re a northerner).  It passes a number of big estates and fine old farms, and the start/finish is in the grounds of Lamport Hall, which is very grand indeed."
         
+        let whiteroseInfo = "This is a 30-mile loop round Marsden and Slaithwaite, in the Pennine hills near Huddersfield.  It includes parts of the Pennine Way and the Kirklees Way, and should make for really good running, with variety and interest.  I haven’t run the race myself yet, but from my knowledge of the area I think there are similarities to the Haworth Hobble – moorland and rough pasture, and about the same amount of climbing per mile. There are 60-mile and 100-mile options as well, but your Runfurther points can only be earned from the 1-lap 30-mile race.  The 60-mile race is simply 2 loops of the same route, however, and the 100-mile race 3 loops with an additional 10 mile section at the end.  If you want to enter one of the longer races it may be possible to get an official time for your first 30 miles however, and we would then count that for Runfurther points.  We haven’t confirmed that with the race organisers yet though, so check with them first."
+        
+        let roundrothInfo = "The Round Rotherham 50 was first run in 1983, so it has a lot of history.  It’s a fast race as the route is fairly flat and virtually all runnable as it’s nearly all on good paths and tracks.  It starts and finishes at a college sports centre near Rotherham, and the route is a mixture of old industrial areas being reclaimed by woodland, river and canal banks, and quiet farmland.  It starts at 7am, but you can sleep overnight the night before in the sports hall if you want."
         
         //Create race objects
         guard let calderdaleHike = Race(name: "Calderdale Hike", logo: calderdaleHikeLogo, distance: 37, climb: 6600, cost: 15, location: "West Yorkshire", date: "Sat 1 April", info: calderdaleInfo) else {
@@ -85,7 +90,16 @@ class AppDataHelper {
             fatalError("Could not load Northants")
         }
         
-        return [calderdaleHike, fellsman, longTourOfBradwell, pennine39, hardmoor, jedburgh, northants]
+        guard let whiterose = Race(name: "White Rose Ultra", logo: whiteroseulta, distance: 30, climb: 3865, cost: 33, location:  "Yorkshire", date: "Sat 04 November", info: whiteroseInfo) else {
+            fatalError("Could not load White Rose Ultra")
+        }
+        
+        guard let roundRoth = Race(name: "Round Rotherham", logo: roundroth, distance: 50, climb: 3100, cost: 45, location:  "Yorkshire", date: "Sat 14 October", info: roundrothInfo) else {
+            fatalError("Could not load White Rose Ultra")
+        }
+        
+        
+        return [calderdaleHike, fellsman, longTourOfBradwell, pennine39, hardmoor, jedburgh, northants, whiterose, roundRoth]
     }
 
 }

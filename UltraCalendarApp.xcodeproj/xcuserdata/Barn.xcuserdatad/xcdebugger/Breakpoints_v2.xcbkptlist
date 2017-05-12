@@ -26,12 +26,26 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UltraCalendarApp/SearchTableViewController.swift"
-            timestampString = "516203028.227987"
+            timestampString = "516279815.554565"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "154"
+            endingLineNumber = "154">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UltraCalendarAppTests/UltraCalendarAppTests.swift"
+            timestampString = "516280280.705027"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "testRaceInitialiserSucceeds()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

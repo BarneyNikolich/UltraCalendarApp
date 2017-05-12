@@ -16,7 +16,6 @@ class RaceProfileViewCell: UITableViewCell {
     @IBOutlet weak var raceInfoLabel: UILabel!
 
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

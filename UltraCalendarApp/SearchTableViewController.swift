@@ -35,10 +35,11 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        racesArray = AppDataHelper.getRaceArray()
+        racesArray = AppDataHelper.getRaceArray() //Reset the filtered array when search button is pressed. Essentially searching again.
         filterTableView(index: searchBar.selectedScopeButtonIndex, text: searchBar.text!.lowercased())
     }
     
+    //Logic for search functioanlity based on enum (category)
     func filterTableView(index: Int, text: String){
         switch index {
         case selectedScope.Name.rawValue:
@@ -103,8 +104,42 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
 
 //         Configure the cell...
         cell.label.text = race.name
+        cell.cost.text = "£\(race.cost)"
+        cell.distance.text = "\(race.distance) mi"
+        cell.location.text = race.location
+
 
         return cell
     }
+    
+    //Func handles transition segue from table view of races to race profile view - passes accross race object
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        switch(segue.identifier ?? "") {
+            
+        case "selectedRace":
+            guard let raceProfileViewController = segue.destination as? RaceProfileViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            guard let selectedRaceCell = sender as? SearchTableViewCell else {
+                fatalError("Unexpected sender: \(sender)")
+            }
+            
+            guard let indexPath = tableView.indexPath(for: selectedRaceCell) else {
+                fatalError("The selected cell is not being displayed by the table")
+            }
+            
+            //find selected Race in the objectsArray Struct defined in Properties
+            let selectedRace = racesArray[indexPath.row]
+            
+            raceProfileViewController.race = selectedRace
+            
+        default:
+            fatalError("Unexpected Segue Identifier; \(segue.identifier)")
+        }
+    }
+
     
 }

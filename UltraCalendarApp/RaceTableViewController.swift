@@ -56,17 +56,6 @@ class RaceTableViewController: UITableViewController {
         return cell
     }
     
-//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let view = UIView()
-//
-//        let dateLogo = UIImageView(image: #imageLiteral(resourceName: "date"))
-//        dateLogo.frame = CGRect(x: 5, y: 5, width: 35, height: 35)
-//        view.addSubview(dateLogo)
-//
-//       // view.backgroundColor = UIColor.blue
-//        return view
-//    }
-    
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 45
     }
@@ -93,7 +82,8 @@ class RaceTableViewController: UITableViewController {
                         tableSection(sectionName: "August 2017", sectionObjects:[AppDataHelper.getRaceByName(raceName: "Long Tour Bradwell")]),
                         tableSection(sectionName: "July 2017", sectionObjects:[AppDataHelper.getRaceByName(raceName: "Pennine 39")]),
                         tableSection(sectionName: "September 2017", sectionObjects: [AppDataHelper.getRaceByName(raceName: "Hardmoor 60")]),
-                        tableSection(sectionName: "October 2017", sectionObjects: [AppDataHelper.getRaceByName(raceName: "Jedburgh 3 Peaks")])
+                        tableSection(sectionName: "October 2017", sectionObjects: [AppDataHelper.getRaceByName(raceName: "Jedburgh 3 Peaks"), AppDataHelper.getRaceByName(raceName: "Round Rotherham")]),
+                        tableSection(sectionName: "November 2017", sectionObjects: [AppDataHelper.getRaceByName(raceName: "White Rose Ultra")])
         ]
     }
 
